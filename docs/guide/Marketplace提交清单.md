@@ -2,17 +2,19 @@
 
 Official publish form: https://cursor.com/marketplace/publish
 
+**Public repo:** https://github.com/LrTox/cursor-tts-mcp
+
 ## Before submit
 
-- [x] `.cursor-plugin/plugin.json` (name=`cursor-tts`)
+- [x] `.cursor-plugin/plugin.json` (name=`cursor-tts`, author=`LrTox`)
 - [x] Root `mcp.json` (portable `uvx --from ${PLUGIN_ROOT}`)
 - [x] `rules/cursor-tts-speak.mdc`
 - [x] `assets/logo.svg`
 - [x] `LICENSE` (MIT)
 - [x] `README.md` with install/usage
-- [ ] **Public** GitHub repository URL
-- [ ] Local test: Customize → install / or `~/.cursor/plugins/local/cursor-tts`
-- [ ] Submit repo link at marketplace/publish (Cursor account login)
+- [x] **Public** GitHub repository: https://github.com/LrTox/cursor-tts-mcp
+- [ ] Local smoke: Customize → install Plugin / or `~/.cursor/plugins/local/cursor-tts`
+- [ ] Submit repo URL at marketplace/publish (login with your Cursor account)
 
 ## Notes for reviewers
 
