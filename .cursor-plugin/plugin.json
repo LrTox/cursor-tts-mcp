@@ -1,0 +1,20 @@
+{
+  "name": "cursor-tts",
+  "version": "0.1.0",
+  "description": "Progress-triggered TTS for Cursor Agent: speak/stop with system-locale voice (edge-tts).",
+  "author": {
+    "name": "cursor-tts contributors"
+  },
+  "keywords": [
+    "tts",
+    "speech",
+    "mcp",
+    "accessibility",
+    "edge-tts",
+    "cursor"
+  ],
+  "license": "MIT",
+  "logo": "assets/logo.svg",
+  "mcpServers": "mcp.json",
+  "rules": "rules"
+}

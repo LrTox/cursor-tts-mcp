@@ -1,0 +1,35 @@
+tts:
+  enabled: true
+  max_chars: 80
+  queue_size: 3
+  dedupe_window_ms: 5000
+  rate: "+5%"  # slightly faster, less “朗读腔”
+  engine:
+    primary: edge-tts
+    fallback: sapi
+    # 默认关闭：SAPI 机械音听感差；仅排查/离线时可 CURSOR_TTS_FALLBACK=true
+    fallback_enabled: false
+    # 默认禁止 SAPI 作主引擎/兜底；显式 CURSOR_TTS_ALLOW_SAPI=true 才启用
+    allow_sapi: false
+  edge:
+    timeout_ms: 8000
+    # auto = 跟随系统 UI 语言选音色；也可写死如 zh-CN-XiaoxiaoNeural
+    voice: "auto"
+  locale:
+    auto: true  # false 则忽略系统语言；仍可用 CURSOR_TTS_EDGE_VOICE 覆盖
+    # voice_map:  # 可选覆盖，键为语言/地区（zh / zh-CN / en-US）
+    #   zh-CN: zh-CN-YunxiNeural
+    #   en: en-US-JennyNeural
+  sapi:
+    voice: ""  # empty = system default; do not use Neural IDs
+  playback:
+    backend: auto  # auto | powershell | ffplay
+    # 跨进程互斥：本地冒烟与 MCP 不会叠播
+    exclusive: true
+  service:
+    mode: embedded      # 联调稳定默认；P1 http 可改 http + autostart
+    url: "http://127.0.0.1:18765"
+    host: "127.0.0.1"
+    port: 18765
+    autostart: true
+  log_level: INFO

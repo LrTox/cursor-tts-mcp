@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cursor-tts-mcp"
+version = "0.1.0"
+description = "Thin MCP server for progress-triggered Chinese TTS in Cursor"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "mcp>=1.0.0",
+  "pyyaml>=6.0",
+  "edge-tts>=6.1.0",
+  "httpx>=0.27.0",
+  "starlette>=0.38.0",
+  "uvicorn>=0.30.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.23"]
+
+[project.scripts]
+cursor-tts-mcp = "cursor_tts_mcp.__main__:main"
+tts-service = "tts_service.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+asyncio_mode = "auto"

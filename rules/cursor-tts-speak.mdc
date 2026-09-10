@@ -1,0 +1,10 @@
+---
+description: cursor-tts progress/result/decision speech (speak/stop)
+alwaysApply: true
+---
+
+# cursor-tts speech (required)
+
+When there is real progress, a task conclusion, an error/block, or the user must act, **immediately** call MCP `speak` (namespace often `user-cursor-tts` / `cursor-tts`). Keep text short (≤80 chars). Match the **system UI language** (MCP picks the voice automatically). Do not only type.
+
+Call `stop` if the user asks for silence.

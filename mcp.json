@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "cursor-tts": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "${PLUGIN_ROOT}",
+        "cursor-tts-mcp"
+      ],
+      "env": {
+        "CURSOR_TTS_ENABLED": "true",
+        "CURSOR_TTS_MODE": "embedded",
+        "CURSOR_TTS_PRIMARY": "edge-tts",
+        "CURSOR_TTS_EDGE_VOICE": "auto",
+        "CURSOR_TTS_LOCALE_AUTO": "true",
+        "CURSOR_TTS_FALLBACK": "false",
+        "CURSOR_TTS_ALLOW_SAPI": "false",
+        "CURSOR_TTS_EXCLUSIVE_PLAYBACK": "true",
+        "CURSOR_TTS_LOG_LEVEL": "INFO"
+      }
+    }
+  }
+}

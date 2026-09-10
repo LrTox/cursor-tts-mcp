@@ -1,0 +1,566 @@
+2026-09-10 22:03:05,780 INFO [cursor_tts_mcp.tts_service] starting tts_service on 127.0.0.1:18765
+2026-09-10 22:03:06,415 INFO [cursor_tts_mcp.tts_service] tts_service orchestrator ready primary=edge-tts
+INFO:     Started server process [39636]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:18765 (Press CTRL+C to quit)
+2026-09-10 22:03:17,167 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='progress' code='OK' interrupt=False queued=False text='HTTP模式联调，自然音确认'
+2026-09-10 22:03:17,171 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\8dd1992e87804dfdba62959b812bc0c7.mp3
+2026-09-10 22:03:19,431 INFO [cursor_tts_mcp.playback] player started pid=25684 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\8dd1992e87804dfdba62959b812bc0c7.mp3
+2026-09-10 22:03:22,180 INFO [cursor_tts_mcp.playback] killing player pid=25684
+2026-09-10 22:03:22,222 INFO [cursor_tts_mcp.orchestrator] stop code='OK' was_playing=True cleared=True
+2026-09-10 22:03:22,222 INFO [cursor_tts_mcp.orchestrator] queue worker cancelled
+2026-09-10 22:03:22,227 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='summary' code='OK' interrupt=False queued=False text='单服务无双播确认'
+2026-09-10 22:03:22,228 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\873098f139f347b388e1b43baea86bca.mp3
+2026-09-10 22:03:23,666 INFO [cursor_tts_mcp.playback] player started pid=35544 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\873098f139f347b388e1b43baea86bca.mp3
+2026-09-10 22:03:26,248 INFO [cursor_tts_mcp.playback] killing player pid=35544
+2026-09-10 22:03:26,288 INFO [cursor_tts_mcp.orchestrator] stop code='OK' was_playing=True cleared=True
+2026-09-10 22:03:26,289 INFO [cursor_tts_mcp.orchestrator] queue worker cancelled
+2026-09-10 22:04:01,499 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='progress' code='OK' interrupt=False queued=False text='薄客户端路径确认'
+2026-09-10 22:04:01,500 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\d640dfcd3b0f4f578874ddbff152244d.mp3
+2026-09-10 22:04:03,068 INFO [cursor_tts_mcp.playback] player started pid=31964 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\d640dfcd3b0f4f578874ddbff152244d.mp3
+2026-09-10 22:04:04,727 INFO [cursor_tts_mcp.playback] killing player pid=31964
+2026-09-10 22:04:04,777 INFO [cursor_tts_mcp.orchestrator] stop code='OK' was_playing=True cleared=True
+2026-09-10 22:04:04,778 INFO [cursor_tts_mcp.orchestrator] queue worker cancelled
+2026-09-10 22:04:11,042 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='decision' code='OK' interrupt=False queued=False text='请再重连一次 cursor-tts，以切换到 HTTP 模式。'
+2026-09-10 22:04:11,043 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\5da9c2b6c646495ba41ca90c4a0627e5.mp3
+2026-09-10 22:04:13,474 INFO [cursor_tts_mcp.playback] player started pid=39580 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\5da9c2b6c646495ba41ca90c4a0627e5.mp3
+2026-09-10 22:04:20,323 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:04:20,328 INFO [cursor_tts_mcp.orchestrator] speak_played category='decision' engine='edge-tts' text='请再重连一次 cursor-tts，以切换到 HTTP 模式。'
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1164, in emit
+    self.flush()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1144, in flush
+    self.stream.flush()
+OSError: [Errno 22] Invalid argument
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\WorkSpace\mcp\src\tts_service\__main__.py", line 30, in <module>
+    main()
+  File "E:\WorkSpace\mcp\src\tts_service\__main__.py", line 20, in main
+    uvicorn.run(
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\main.py", line 621, in run
+    server.run()
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\server.py", line 77, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 678, in run_until_complete
+    self.run_forever()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 645, in run_forever
+    self._run_once()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1999, in _run_once
+    handle._run()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 690, in app
+    await route.handle(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 280, in handle
+    await self.app(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 65, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 63, in app
+    await response(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\responses.py", line 166, in __call__
+    await send({"type": "http.response.start", "status": self.status_code, "headers": self.raw_headers})
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 39, in sender
+    await send(message)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 39, in sender
+    await send(message)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\middleware\errors.py", line 161, in _send
+    await send(message)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 482, in send
+    self.access_logger.info(
+Message: '%s - "%s %s HTTP/%s" %d'
+Arguments: ('127.0.0.1:54156', 'GET', '/v1/health', '1.1', 200)
+2026-09-10 22:05:20,544 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='summary' code='OK' interrupt=False queued=False text='刚才做了 HTTP 模式联调：本地服务验过，MCP 已切到 http，等你重连。'
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1164, in emit
+    self.flush()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1144, in flush
+    self.stream.flush()
+OSError: [Errno 22] Invalid argument
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\WorkSpace\mcp\src\tts_service\__main__.py", line 30, in <module>
+    main()
+  File "E:\WorkSpace\mcp\src\tts_service\__main__.py", line 20, in main
+    uvicorn.run(
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\main.py", line 621, in run
+    server.run()
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\server.py", line 77, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 678, in run_until_complete
+    self.run_forever()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 645, in run_forever
+    self._run_once()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1999, in _run_once
+    handle._run()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 690, in app
+    await route.handle(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 280, in handle
+    await self.app(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 65, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 63, in app
+    await response(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\responses.py", line 166, in __call__
+    await send({"type": "http.response.start", "status": self.status_code, "headers": self.raw_headers})
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 39, in sender
+    await send(message)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 39, in sender
+    await send(message)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\middleware\errors.py", line 161, in _send
+    await send(message)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 482, in send
+    self.access_logger.info(
+Message: '%s - "%s %s HTTP/%s" %d'
+Arguments: ('127.0.0.1:54165', 'POST', '/v1/speak', '1.1', 200)
+2026-09-10 22:05:20,554 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\2ffdf774573a4e0bb1158d77b4a08142.mp3
+2026-09-10 22:05:28,564 WARNING [cursor_tts_mcp.engines.router] engine_failed engine='edge-tts' reason=''
+2026-09-10 22:05:28,570 ERROR [cursor_tts_mcp.orchestrator] speak_failed category='summary' reason='' text='刚才做了 HTTP 模式联调：本地服务验过，MCP 已切到 http，等你重连。'
+2026-09-10 22:05:28,570 ERROR [cursor_tts_mcp.orchestrator] background speak failed
+Traceback (most recent call last):
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "E:\WorkSpace\mcp\src\cursor_tts_mcp\engines\edge_tts_engine.py", line 32, in synthesize
+    await communicate.save(str(out))
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\edge_tts\communicate.py", line 613, in save
+    async for message in self.stream():
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\edge_tts\communicate.py", line 588, in stream
+    async for message in self.__stream():
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\edge_tts\communicate.py", line 465, in __stream
+    ) as session, session.ws_connect(
+                  ^^^^^^^^^^^^^^^^^^^
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\aiohttp\client.py", line 1702, in __aexit__
+    await self._resp.__aexit__(exc_type, exc, tb)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\aiohttp\client_ws.py", line 560, in __aexit__
+    await self.close()
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\aiohttp\client_ws.py", line 354, in close
+    msg = await self._reader.read()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "aiohttp/_websocket/reader_c.py", line 121, in read
+  File "aiohttp/_websocket/reader_c.py", line 118, in aiohttp._websocket.reader_c.WebSocketDataQueue.read
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\WorkSpace\mcp\src\cursor_tts_mcp\core\orchestrator.py", line 226, in _run_queue
+    outcome = await self.router.speak(req.text)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\WorkSpace\mcp\src\cursor_tts_mcp\engines\router.py", line 66, in speak
+    outcome = await asyncio.wait_for(
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 519, in wait_for
+    async with timeouts.timeout(timeout):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\timeouts.py", line 115, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+2026-09-10 22:06:00,442 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='progress' code='OK' interrupt=False queued=False text='HTTP 模式重连成功，开始实机验收。'
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1164, in emit
+    self.flush()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1144, in flush
+    self.stream.flush()
+OSError: [Errno 22] Invalid argument
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\WorkSpace\mcp\src\tts_service\__main__.py", line 30, in <module>
+    main()
+  File "E:\WorkSpace\mcp\src\tts_service\__main__.py", line 20, in main
+    uvicorn.run(
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\main.py", line 621, in run
+    server.run()
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\server.py", line 77, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 678, in run_until_complete
+    self.run_forever()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 645, in run_forever
+    self._run_once()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1999, in _run_once
+    handle._run()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 690, in app
+    await route.handle(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 280, in handle
+    await self.app(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 65, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 63, in app
+    await response(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\responses.py", line 166, in __call__
+    await send({"type": "http.response.start", "status": self.status_code, "headers": self.raw_headers})
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 39, in sender
+    await send(message)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 39, in sender
+    await send(message)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\middleware\errors.py", line 161, in _send
+    await send(message)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 482, in send
+    self.access_logger.info(
+Message: '%s - "%s %s HTTP/%s" %d'
+Arguments: ('127.0.0.1:55688', 'POST', '/v1/speak', '1.1', 200)
+2026-09-10 22:06:00,453 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\e3d188c3ef5b4097b68ee0c9fe1f3828.mp3
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1164, in emit
+    self.flush()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1144, in flush
+    self.stream.flush()
+OSError: [Errno 22] Invalid argument
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\WorkSpace\mcp\src\tts_service\__main__.py", line 30, in <module>
+    main()
+  File "E:\WorkSpace\mcp\src\tts_service\__main__.py", line 20, in main
+    uvicorn.run(
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\main.py", line 621, in run
+    server.run()
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\server.py", line 77, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 678, in run_until_complete
+    self.run_forever()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 645, in run_forever
+    self._run_once()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1999, in _run_once
+    handle._run()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 690, in app
+    await route.handle(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 280, in handle
+    await self.app(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 65, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 63, in app
+    await response(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\responses.py", line 166, in __call__
+    await send({"type": "http.response.start", "status": self.status_code, "headers": self.raw_headers})
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 39, in sender
+    await send(message)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 39, in sender
+    await send(message)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\middleware\errors.py", line 161, in _send
+    await send(message)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 482, in send
+    self.access_logger.info(
+Message: '%s - "%s %s HTTP/%s" %d'
+Arguments: ('127.0.0.1:55743', 'GET', '/v1/health', '1.1', 200)
+2026-09-10 22:06:03,281 INFO [cursor_tts_mcp.playback] player started pid=32276 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\e3d188c3ef5b4097b68ee0c9fe1f3828.mp3
+2026-09-10 22:06:08,955 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:06:08,955 INFO [cursor_tts_mcp.orchestrator] speak_played category='progress' engine='edge-tts' text='HTTP 模式重连成功，开始实机验收。'
+2026-09-10 22:06:09,576 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='summary' code='OK' interrupt=False queued=False text='HTTP 联调通过：健康检查正常，播报已走服务。'
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1164, in emit
+    self.flush()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1144, in flush
+    self.stream.flush()
+OSError: [Errno 22] Invalid argument
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\WorkSpace\mcp\src\tts_service\__main__.py", line 30, in <module>
+    main()
+  File "E:\WorkSpace\mcp\src\tts_service\__main__.py", line 20, in main
+    uvicorn.run(
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\main.py", line 621, in run
+    server.run()
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\server.py", line 77, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 678, in run_until_complete
+    self.run_forever()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 645, in run_forever
+    self._run_once()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1999, in _run_once
+    handle._run()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 690, in app
+    await route.handle(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 280, in handle
+    await self.app(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 65, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 63, in app
+    await response(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\responses.py", line 166, in __call__
+    await send({"type": "http.response.start", "status": self.status_code, "headers": self.raw_headers})
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 39, in sender
+    await send(message)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 39, in sender
+    await send(message)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\middleware\errors.py", line 161, in _send
+    await send(message)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 482, in send
+    self.access_logger.info(
+Message: '%s - "%s %s HTTP/%s" %d'
+Arguments: ('127.0.0.1:56028', 'POST', '/v1/speak', '1.1', 200)
+2026-09-10 22:06:09,587 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\cff738f2218d45a0a848d2805f25dca5.mp3
+2026-09-10 22:06:11,604 INFO [cursor_tts_mcp.playback] player started pid=20872 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\cff738f2218d45a0a848d2805f25dca5.mp3
+2026-09-10 22:06:15,350 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='decision' code='OK' interrupt=False queued=True text='请确认刚才两句是否都是自然音、没有卡顿或机械音。'
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1164, in emit
+    self.flush()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1144, in flush
+    self.stream.flush()
+OSError: [Errno 22] Invalid argument
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\WorkSpace\mcp\src\tts_service\__main__.py", line 30, in <module>
+    main()
+  File "E:\WorkSpace\mcp\src\tts_service\__main__.py", line 20, in main
+    uvicorn.run(
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\main.py", line 621, in run
+    server.run()
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\server.py", line 77, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 678, in run_until_complete
+    self.run_forever()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 645, in run_forever
+    self._run_once()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1999, in _run_once
+    handle._run()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 690, in app
+    await route.handle(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 280, in handle
+    await self.app(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 65, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 63, in app
+    await response(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\responses.py", line 166, in __call__
+    await send({"type": "http.response.start", "status": self.status_code, "headers": self.raw_headers})
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 39, in sender
+    await send(message)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 39, in sender
+    await send(message)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\middleware\errors.py", line 161, in _send
+    await send(message)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 482, in send
+    self.access_logger.info(
+Message: '%s - "%s %s HTTP/%s" %d'
+Arguments: ('127.0.0.1:56244', 'POST', '/v1/speak', '1.1', 200)
+2026-09-10 22:06:17,799 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:06:17,799 INFO [cursor_tts_mcp.orchestrator] speak_played category='summary' engine='edge-tts' text='HTTP 联调通过：健康检查正常，播报已走服务。'
+2026-09-10 22:06:17,800 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\afffcd5f4f794a4288fef59113f23ea5.mp3
+2026-09-10 22:06:20,784 INFO [cursor_tts_mcp.playback] player started pid=36288 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\afffcd5f4f794a4288fef59113f23ea5.mp3
+2026-09-10 22:06:27,148 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:06:27,153 INFO [cursor_tts_mcp.orchestrator] speak_played category='decision' engine='edge-tts' text='请确认刚才两句是否都是自然音、没有卡顿或机械音。'
+2026-09-10 22:07:18,953 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='progress' code='OK' interrupt=False queued=False text='先停掉现有语音服务，方便验证重启后自动拉起。'
+--- Logging error ---
+Traceback (most recent call last):
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1164, in emit
+    self.flush()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\logging\__init__.py", line 1144, in flush
+    self.stream.flush()
+OSError: [Errno 22] Invalid argument
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\WorkSpace\mcp\src\tts_service\__main__.py", line 30, in <module>
+    main()
+  File "E:\WorkSpace\mcp\src\tts_service\__main__.py", line 20, in main
+    uvicorn.run(
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\main.py", line 621, in run
+    server.run()
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\server.py", line 77, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 195, in run
+    return runner.run(main)
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 678, in run_until_complete
+    self.run_forever()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\windows_events.py", line 322, in run_forever
+    super().run_forever()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 645, in run_forever
+    self._run_once()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 1999, in _run_once
+    handle._run()
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 63, in __call__
+    return await self.app(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\applications.py", line 96, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 670, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 690, in app
+    await route.handle(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 280, in handle
+    await self.app(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 65, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\routing.py", line 63, in app
+    await response(scope, receive, send)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\responses.py", line 166, in __call__
+    await send({"type": "http.response.start", "status": self.status_code, "headers": self.raw_headers})
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 39, in sender
+    await send(message)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\_exception_handler.py", line 39, in sender
+    await send(message)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\starlette\middleware\errors.py", line 161, in _send
+    await send(message)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 482, in send
+    self.access_logger.info(
+Message: '%s - "%s %s HTTP/%s" %d'
+Arguments: ('127.0.0.1:58619', 'POST', '/v1/speak', '1.1', 200)
+2026-09-10 22:07:18,961 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\9cd483b1f50a4a8890a7f4223812ce4e.mp3

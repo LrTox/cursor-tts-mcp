@@ -1,0 +1,266 @@
+2026-09-10 22:08:29,840 INFO [cursor_tts_mcp.tts_service] starting tts_service on 127.0.0.1:18765
+2026-09-10 22:08:30,549 INFO [cursor_tts_mcp.tts_service] tts_service orchestrator ready primary=edge-tts
+[32mINFO[0m:     Started server process [[36m23876[0m]
+[32mINFO[0m:     Waiting for application startup.
+[32mINFO[0m:     Application startup complete.
+[32mINFO[0m:     Uvicorn running on [1mhttp://127.0.0.1:18765[0m (Press CTRL+C to quit)
+2026-09-10 22:08:30,890 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='decision' code='OK' interrupt=False queued=False text='����ȫ�˳������� Cursor��������ظ���������'
+2026-09-10 22:08:30,891 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\5cc7268fc28348b29584098bb03a04a2.mp3
+2026-09-10 22:08:34,503 INFO [cursor_tts_mcp.playback] player started pid=12296 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\5cc7268fc28348b29584098bb03a04a2.mp3
+2026-09-10 22:08:40,278 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:08:40,278 INFO [cursor_tts_mcp.orchestrator] speak_played category='decision' engine='edge-tts' text='����ȫ�˳������� Cursor��������ظ���������'
+2026-09-10 22:12:02,958 INFO [cursor_tts_mcp.tts_service] starting tts_service on 127.0.0.1:18765
+2026-09-10 22:12:03,700 INFO [cursor_tts_mcp.tts_service] tts_service orchestrator ready primary=edge-tts
+[32mINFO[0m:     Started server process [[36m36268[0m]
+[32mINFO[0m:     Waiting for application startup.
+[32mINFO[0m:     Application startup complete.
+[32mINFO[0m:     Uvicorn running on [1mhttp://127.0.0.1:18765[0m (Press CTRL+C to quit)
+2026-09-10 22:12:04,217 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='progress' code='OK' interrupt=False queued=False text='自动拉起修复冒烟'
+2026-09-10 22:12:04,217 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\2c31da3c7e1746b491c51aa3ec845629.mp3
+2026-09-10 22:12:05,644 INFO [cursor_tts_mcp.playback] player started pid=32476 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\2c31da3c7e1746b491c51aa3ec845629.mp3
+2026-09-10 22:12:12,255 INFO [cursor_tts_mcp.tts_service] starting tts_service on 127.0.0.1:18765
+2026-09-10 22:12:12,951 INFO [cursor_tts_mcp.tts_service] tts_service orchestrator ready primary=edge-tts
+[32mINFO[0m:     Started server process [[36m26980[0m]
+[32mINFO[0m:     Waiting for application startup.
+[32mINFO[0m:     Application startup complete.
+[32mINFO[0m:     Uvicorn running on [1mhttp://127.0.0.1:18765[0m (Press CTRL+C to quit)
+2026-09-10 22:12:13,281 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='summary' code='OK' interrupt=False queued=False text='服务死后自动恢复'
+2026-09-10 22:12:13,281 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\576284af4f1742d2b9bc822efadb1e60.mp3
+2026-09-10 22:12:15,738 INFO [cursor_tts_mcp.playback] player started pid=23640 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\576284af4f1742d2b9bc822efadb1e60.mp3
+2026-09-10 22:12:16,497 INFO [cursor_tts_mcp.playback] killing player pid=23640
+2026-09-10 22:12:16,544 INFO [cursor_tts_mcp.orchestrator] stop code='OK' was_playing=True cleared=True
+2026-09-10 22:12:16,545 INFO [cursor_tts_mcp.orchestrator] queue worker cancelled
+2026-09-10 22:12:29,056 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='decision' code='OK' interrupt=False queued=False text='已修复自动拉起。请再重连一次 cursor-tts。'
+2026-09-10 22:12:29,057 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\ee57e99168bc4e13b9cd1571f5dc3304.mp3
+2026-09-10 22:12:31,126 INFO [cursor_tts_mcp.playback] player started pid=17052 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\ee57e99168bc4e13b9cd1571f5dc3304.mp3
+2026-09-10 22:12:37,646 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:12:37,646 INFO [cursor_tts_mcp.orchestrator] speak_played category='decision' engine='edge-tts' text='已修复自动拉起。请再重连一次 cursor-tts。'
+2026-09-10 22:14:31,092 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='summary' code='OK' interrupt=False queued=False text='你要验证：重启 Cursor 后，语音是否会自动正常触发。'
+2026-09-10 22:14:31,093 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\b2f08d2650ff4888b368bbebb373ad89.mp3
+2026-09-10 22:14:33,355 INFO [cursor_tts_mcp.playback] player started pid=11072 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\b2f08d2650ff4888b368bbebb373ad89.mp3
+2026-09-10 22:14:39,306 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:14:39,306 INFO [cursor_tts_mcp.orchestrator] speak_played category='summary' engine='edge-tts' text='你要验证：重启 Cursor 后，语音是否会自动正常触发。'
+2026-09-10 22:14:59,261 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='progress' code='OK' interrupt=False queued=False text='收到，正在做一次最终确认播报。'
+2026-09-10 22:14:59,262 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\32c40f71bc2645cd882929315dd4641d.mp3
+2026-09-10 22:15:02,149 INFO [cursor_tts_mcp.playback] player started pid=36176 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\32c40f71bc2645cd882929315dd4641d.mp3
+2026-09-10 22:15:07,056 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:15:07,056 INFO [cursor_tts_mcp.orchestrator] speak_played category='progress' engine='edge-tts' text='收到，正在做一次最终确认播报。'
+2026-09-10 22:15:07,732 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='summary' code='OK' interrupt=False queued=False text='重启后自动触发验证通过，HTTP 联调闭环。'
+2026-09-10 22:15:07,733 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\621ad626185d4b14a03342561c598529.mp3
+2026-09-10 22:15:09,710 INFO [cursor_tts_mcp.playback] player started pid=23784 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\621ad626185d4b14a03342561c598529.mp3
+2026-09-10 22:15:15,660 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:15:15,660 INFO [cursor_tts_mcp.orchestrator] speak_played category='summary' engine='edge-tts' text='重启后自动触发验证通过，HTTP 联调闭环。'
+2026-09-10 22:15:43,218 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='summary' code='OK' interrupt=False queued=False text='计划 T1 到 T7 和 P1 联调都已完成。'
+2026-09-10 22:15:43,219 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\9bf2c702ee234ec1a773cdcf50b3d19d.mp3
+2026-09-10 22:15:45,076 INFO [cursor_tts_mcp.playback] player started pid=25216 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\9bf2c702ee234ec1a773cdcf50b3d19d.mp3
+2026-09-10 22:15:50,614 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:15:50,614 INFO [cursor_tts_mcp.orchestrator] speak_played category='summary' engine='edge-tts' text='计划 T1 到 T7 和 P1 联调都已完成。'
+2026-09-10 22:17:53,147 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='summary' code='OK' interrupt=False queued=False text='是的，已加在用户级 mcp 配置里。'
+2026-09-10 22:17:53,147 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\fcded780b127416a9d12eb2b8ca4c6be.mp3
+2026-09-10 22:17:55,856 INFO [cursor_tts_mcp.playback] player started pid=40824 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\fcded780b127416a9d12eb2b8ca4c6be.mp3
+2026-09-10 22:18:01,045 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:18:01,045 INFO [cursor_tts_mcp.orchestrator] speak_played category='summary' engine='edge-tts' text='是的，已加在用户级 mcp 配置里。'
+2026-09-10 22:23:05,821 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='progress' code='OK' interrupt=False queued=False text='正在排查 LMS 未触发播报的原因。'
+2026-09-10 22:23:05,822 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\168a1f27e27f484f90bb140ca7a3df34.mp3
+2026-09-10 22:23:07,199 INFO [cursor_tts_mcp.playback] player started pid=12332 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\168a1f27e27f484f90bb140ca7a3df34.mp3
+2026-09-10 22:23:12,551 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:23:12,551 INFO [cursor_tts_mcp.orchestrator] speak_played category='progress' engine='edge-tts' text='正在排查 LMS 未触发播报的原因。'
+2026-09-10 22:23:14,605 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='summary' code='OK' interrupt=False queued=False text='原因是播报规则只在 mcp 项目里，LMS 工作区没有强制调用。'
+2026-09-10 22:23:14,605 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\d0081632a1b446e1807d0e179dcedd28.mp3
+2026-09-10 22:23:18,305 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='decision' code='OK' interrupt=False queued=True text='是否把播报规则加到用户级，让所有项目都生效？'
+2026-09-10 22:23:22,604 WARNING [cursor_tts_mcp.engines.router] engine_failed engine='edge-tts' reason=''
+2026-09-10 22:23:22,604 ERROR [cursor_tts_mcp.orchestrator] speak_failed category='summary' reason='' text='原因是播报规则只在 mcp 项目里，LMS 工作区没有强制调用。'
+2026-09-10 22:23:22,605 ERROR [cursor_tts_mcp.orchestrator] background speak failed
+Traceback (most recent call last):
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 520, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "E:\WorkSpace\mcp\src\cursor_tts_mcp\engines\edge_tts_engine.py", line 32, in synthesize
+    await communicate.save(str(out))
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\edge_tts\communicate.py", line 613, in save
+    async for message in self.stream():
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\edge_tts\communicate.py", line 588, in stream
+    async for message in self.__stream():
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\edge_tts\communicate.py", line 465, in __stream
+    ) as session, session.ws_connect(
+                  ^^^^^^^^^^^^^^^^^^^
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\aiohttp\client.py", line 1702, in __aexit__
+    await self._resp.__aexit__(exc_type, exc, tb)
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\aiohttp\client_ws.py", line 560, in __aexit__
+    await self.close()
+  File "E:\WorkSpace\mcp\.venv\Lib\site-packages\aiohttp\client_ws.py", line 354, in close
+    msg = await self._reader.read()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "aiohttp/_websocket/reader_c.py", line 121, in read
+  File "aiohttp/_websocket/reader_c.py", line 118, in aiohttp._websocket.reader_c.WebSocketDataQueue.read
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\WorkSpace\mcp\src\cursor_tts_mcp\core\orchestrator.py", line 226, in _run_queue
+    outcome = await self.router.speak(req.text)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\WorkSpace\mcp\src\cursor_tts_mcp\engines\router.py", line 66, in speak
+    outcome = await asyncio.wait_for(
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\tasks.py", line 519, in wait_for
+    async with timeouts.timeout(timeout):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\17695\AppData\Local\Programs\Python\Python312\Lib\asyncio\timeouts.py", line 115, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+2026-09-10 22:23:22,608 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\6c16553b9dcb47e1bc06dc8e7685168e.mp3
+2026-09-10 22:23:24,353 INFO [cursor_tts_mcp.playback] player started pid=41888 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\6c16553b9dcb47e1bc06dc8e7685168e.mp3
+2026-09-10 22:23:30,524 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:23:30,524 INFO [cursor_tts_mcp.orchestrator] speak_played category='decision' engine='edge-tts' text='是否把播报规则加到用户级，让所有项目都生效？'
+2026-09-10 22:23:48,986 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='progress' code='OK' interrupt=False queued=False text='正在把播报规则安装到用户级。'
+2026-09-10 22:23:48,987 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\e2d819baec8345448e188357dc03e135.mp3
+2026-09-10 22:23:51,097 INFO [cursor_tts_mcp.playback] player started pid=41944 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\e2d819baec8345448e188357dc03e135.mp3
+2026-09-10 22:23:55,913 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:23:55,913 INFO [cursor_tts_mcp.orchestrator] speak_played category='progress' engine='edge-tts' text='正在把播报规则安装到用户级。'
+2026-09-10 22:24:06,929 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='summary' code='OK' interrupt=False queued=False text='用户级播报规则已装好，新开对话后全局生效。'
+2026-09-10 22:24:06,930 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\b55d2ddfe5ef4850a2507140fd521bbb.mp3
+2026-09-10 22:24:08,484 INFO [cursor_tts_mcp.playback] player started pid=31760 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\b55d2ddfe5ef4850a2507140fd521bbb.mp3
+2026-09-10 22:24:14,882 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:24:14,882 INFO [cursor_tts_mcp.orchestrator] speak_played category='summary' engine='edge-tts' text='用户级播报规则已装好，新开对话后全局生效。'
+2026-09-10 22:26:42,518 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='progress' code='OK' interrupt=False queued=False text='正在查旧对话不触发播报规则的原因。'
+2026-09-10 22:26:42,519 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\8048cbd862134c58b24d05b0b43126d5.mp3
+2026-09-10 22:26:44,598 INFO [cursor_tts_mcp.playback] player started pid=26872 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\8048cbd862134c58b24d05b0b43126d5.mp3
+2026-09-10 22:26:49,803 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:26:49,803 INFO [cursor_tts_mcp.orchestrator] speak_played category='progress' engine='edge-tts' text='正在查旧对话不触发播报规则的原因。'
+2026-09-10 22:29:08,207 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='progress' code='OK' interrupt=False queued=False text='规则不会热更新；改用用户级 Hook 注入提醒。'
+2026-09-10 22:29:08,208 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\b83a148ad71241768d5fdcca5440db64.mp3
+2026-09-10 22:29:10,432 INFO [cursor_tts_mcp.playback] player started pid=16368 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\b83a148ad71241768d5fdcca5440db64.mp3
+2026-09-10 22:29:16,297 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:29:16,297 INFO [cursor_tts_mcp.orchestrator] speak_played category='progress' engine='edge-tts' text='规则不会热更新；改用用户级 Hook 注入提醒。'
+2026-09-10 22:30:13,074 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='summary' code='OK' interrupt=False queued=False text='根因是旧对话不热更新规则；已用用户级 Hook 补救。'
+2026-09-10 22:30:13,074 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\19cdc84601264ae2b416fd269780bbea.mp3
+2026-09-10 22:30:16,183 INFO [cursor_tts_mcp.playback] player started pid=22144 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\19cdc84601264ae2b416fd269780bbea.mp3
+2026-09-10 22:30:22,735 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:30:22,736 INFO [cursor_tts_mcp.orchestrator] speak_played category='summary' engine='edge-tts' text='根因是旧对话不热更新规则；已用用户级 Hook 补救。'
+2026-09-10 22:31:12,063 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='summary' code='OK' interrupt=False queued=False text='是的，旧对话普遍不热更新规则，不单是语音。'
+2026-09-10 22:31:12,063 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\a3c9271d6bee4210a76dfdb827a89756.mp3
+2026-09-10 22:31:13,791 INFO [cursor_tts_mcp.playback] player started pid=42660 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\a3c9271d6bee4210a76dfdb827a89756.mp3
+2026-09-10 22:31:19,880 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:31:19,880 INFO [cursor_tts_mcp.orchestrator] speak_played category='summary' engine='edge-tts' text='是的，旧对话普遍不热更新规则，不单是语音。'
+2026-09-10 22:31:41,596 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='progress' code='OK' interrupt=False queued=False text='正在加强旧对话规则补丁，扩大 Hook 覆盖。'
+2026-09-10 22:31:41,597 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\5ee063d29e9e4d238132c383a7a5f44f.mp3
+2026-09-10 22:31:43,284 INFO [cursor_tts_mcp.playback] player started pid=42604 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\5ee063d29e9e4d238132c383a7a5f44f.mp3
+2026-09-10 22:31:48,937 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:31:48,938 INFO [cursor_tts_mcp.orchestrator] speak_played category='progress' engine='edge-tts' text='正在加强旧对话规则补丁，扩大 Hook 覆盖。'
+2026-09-10 22:33:17,114 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='summary' code='OK' interrupt=False queued=False text='旧对话补丁已加强：未播报会在回合结束自动催促。'
+2026-09-10 22:33:17,115 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\1046dae5ceeb4c54beaa903588dae0b0.mp3
+2026-09-10 22:33:19,547 INFO [cursor_tts_mcp.playback] player started pid=39320 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\1046dae5ceeb4c54beaa903588dae0b0.mp3
+2026-09-10 22:33:23,473 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='decision' code='OK' interrupt=False queued=True text='请在旧 LMS 对话再试一轮；若无催促可 Reload Window。'
+2026-09-10 22:33:26,251 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:33:26,251 INFO [cursor_tts_mcp.orchestrator] speak_played category='summary' engine='edge-tts' text='旧对话补丁已加强：未播报会在回合结束自动催促。'
+2026-09-10 22:33:26,252 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\56a31c307a1543648eeb7b8806dfd36f.mp3
+2026-09-10 22:33:29,304 INFO [cursor_tts_mcp.playback] player started pid=23056 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\56a31c307a1543648eeb7b8806dfd36f.mp3
+2026-09-10 22:33:35,703 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:33:35,703 INFO [cursor_tts_mcp.orchestrator] speak_played category='decision' engine='edge-tts' text='请在旧 LMS 对话再试一轮；若无催促可 Reload Window。'
+2026-09-10 22:36:23,513 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='progress' code='OK' interrupt=False queued=False text='正在排查规则热更新失败。'
+2026-09-10 22:36:23,514 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\b14e309f3e0244cda155f0ad3943d397.mp3
+2026-09-10 22:36:24,836 INFO [cursor_tts_mcp.playback] player started pid=30184 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\b14e309f3e0244cda155f0ad3943d397.mp3
+2026-09-10 22:36:29,251 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:36:29,251 INFO [cursor_tts_mcp.orchestrator] speak_played category='progress' engine='edge-tts' text='正在排查规则热更新失败。'
+2026-09-10 22:37:17,170 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='progress' code='OK' interrupt=False queued=False text='定位到 Hook 催促范围过窄，正在加固。'
+2026-09-10 22:37:17,171 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\0bb8293602d448bfa9e8022426a7b59f.mp3
+2026-09-10 22:37:18,893 INFO [cursor_tts_mcp.playback] player started pid=32392 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\0bb8293602d448bfa9e8022426a7b59f.mp3
+2026-09-10 22:37:24,247 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:37:24,247 INFO [cursor_tts_mcp.orchestrator] speak_played category='progress' engine='edge-tts' text='定位到 Hook 催促范围过窄，正在加固。'
+2026-09-10 22:38:54,457 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='summary' code='OK' interrupt=False queued=False text='已加固 Hook：旧对话可催促 speak，Rules 本身仍无法真热更新。'
+2026-09-10 22:38:54,458 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\539a2d74547e47579876e8d04ccfdfb0.mp3
+2026-09-10 22:38:57,037 INFO [cursor_tts_mcp.playback] player started pid=32496 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\539a2d74547e47579876e8d04ccfdfb0.mp3
+2026-09-10 22:39:04,523 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:39:04,523 INFO [cursor_tts_mcp.orchestrator] speak_played category='summary' engine='edge-tts' text='已加固 Hook：旧对话可催促 speak，Rules 本身仍无法真热更新。'
+2026-09-10 22:42:43,024 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='progress' code='OK' interrupt=False queued=False text='正在核查重启后规则与 Hook 为何未生效。'
+2026-09-10 22:42:43,025 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\2b8e3d2b411a4167a7033dbe36c7172f.mp3
+2026-09-10 22:42:44,699 INFO [cursor_tts_mcp.playback] player started pid=22452 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\2b8e3d2b411a4167a7033dbe36c7172f.mp3
+2026-09-10 22:42:50,453 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:42:50,453 INFO [cursor_tts_mcp.orchestrator] speak_played category='progress' engine='edge-tts' text='正在核查重启后规则与 Hook 为何未生效。'
+2026-09-10 22:43:21,117 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='progress' code='OK' interrupt=False queued=False text='将改为回复结束时 Hook 直接播报，不依赖规则热更新。'
+2026-09-10 22:43:21,118 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\add8a58b1ad54c2cbb11d5a1ad4e1615.mp3
+2026-09-10 22:43:23,204 INFO [cursor_tts_mcp.playback] player started pid=16692 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\add8a58b1ad54c2cbb11d5a1ad4e1615.mp3
+2026-09-10 22:43:29,768 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:43:29,768 INFO [cursor_tts_mcp.orchestrator] speak_played category='progress' engine='edge-tts' text='将改为回复结束时 Hook 直接播报，不依赖规则热更新。'
+2026-09-10 22:44:37,530 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='progress' code='OK' interrupt=False queued=False text='正在核实 Cursor 规则能否真正热更新。'
+2026-09-10 22:44:37,531 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\d404625f268f44c6b327ab712a6747ab.mp3
+2026-09-10 22:44:39,357 INFO [cursor_tts_mcp.playback] player started pid=41392 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\d404625f268f44c6b327ab712a6747ab.mp3
+2026-09-10 22:44:44,796 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:44:44,796 INFO [cursor_tts_mcp.orchestrator] speak_played category='progress' engine='edge-tts' text='正在核实 Cursor 规则能否真正热更新。'
+2026-09-10 22:44:52,874 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='summary' code='OK' interrupt=False queued=False text='结论：规则热更新是 Cursor 产品限制，本地无法真正修复，只能新开对话或用 '
+2026-09-10 22:44:52,875 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\cad20db1e29d40e9bc155f2322ec9fe8.mp3
+2026-09-10 22:44:55,457 INFO [cursor_tts_mcp.playback] player started pid=32888 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\cad20db1e29d40e9bc155f2322ec9fe8.mp3
+2026-09-10 22:45:05,820 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:45:05,820 INFO [cursor_tts_mcp.orchestrator] speak_played category='summary' engine='edge-tts' text='结论：规则热更新是 Cursor 产品限制，本地无法真正修复，只能新开对话或用 '
+2026-09-10 22:47:56,076 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='summary' code='OK' interrupt=False queued=False text='规则已重新加载。新增远端禁明文密码、语音播报，以及 Playwright 与开发'
+2026-09-10 22:47:56,076 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\dcae48dc5c6543df80d823e9a6546164.mp3
+2026-09-10 22:47:59,566 INFO [cursor_tts_mcp.playback] player started pid=33268 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\dcae48dc5c6543df80d823e9a6546164.mp3
+2026-09-10 22:48:09,824 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:48:09,824 INFO [cursor_tts_mcp.orchestrator] speak_played category='summary' engine='edge-tts' text='规则已重新加载。新增远端禁明文密码、语音播报，以及 Playwright 与开发'
+2026-09-10 22:50:14,151 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='summary' code='OK' interrupt=True queued=False text='规则已按仓库最新版重新加载。生产库只读仍最高；远端脚本禁明文密码，本机连库不受影'
+2026-09-10 22:50:14,152 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\39056a4db8c043fd9c68a5bd421a4c3e.mp3
+2026-09-10 22:50:17,410 INFO [cursor_tts_mcp.playback] player started pid=33000 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\39056a4db8c043fd9c68a5bd421a4c3e.mp3
+2026-09-10 22:50:28,665 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:50:28,666 INFO [cursor_tts_mcp.orchestrator] speak_played category='summary' engine='edge-tts' text='规则已按仓库最新版重新加载。生产库只读仍最高；远端脚本禁明文密码，本机连库不受影'
+2026-09-10 22:52:07,564 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='progress' code='OK' interrupt=False queued=False text='正在查看你本机的 MCP 配置，随后说明怎么分享给朋友。'
+2026-09-10 22:52:07,565 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\a174ffba266e4e55bb9a7d50b06e3417.mp3
+2026-09-10 22:52:10,156 INFO [cursor_tts_mcp.playback] player started pid=5200 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\a174ffba266e4e55bb9a7d50b06e3417.mp3
+2026-09-10 22:52:17,410 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:52:17,410 INFO [cursor_tts_mcp.orchestrator] speak_played category='progress' engine='edge-tts' text='正在查看你本机的 MCP 配置，随后说明怎么分享给朋友。'
+2026-09-10 22:53:38,986 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='summary' code='OK' interrupt=False queued=False text='分享 MCP：推仓库给朋友，让他按说明配 mcp.json；别直接拷贝含本机绝对'
+2026-09-10 22:53:38,986 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\b31af24275ac460d84d0452ef6e4235b.mp3
+2026-09-10 22:53:42,162 INFO [cursor_tts_mcp.playback] player started pid=42592 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\b31af24275ac460d84d0452ef6e4235b.mp3
+2026-09-10 22:53:53,306 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:53:53,306 INFO [cursor_tts_mcp.orchestrator] speak_played category='summary' engine='edge-tts' text='分享 MCP：推仓库给朋友，让他按说明配 mcp.json；别直接拷贝含本机绝对'
+2026-09-10 22:55:05,861 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='progress' code='OK' interrupt=False queued=False text='正在查 Cursor 官方是否支持把 MCP 发到可搜索的工具集。'
+2026-09-10 22:55:05,862 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\faae2d868dc84519b6c96de3423c6d8d.mp3
+2026-09-10 22:55:07,847 INFO [cursor_tts_mcp.playback] player started pid=42940 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\faae2d868dc84519b6c96de3423c6d8d.mp3
+2026-09-10 22:55:15,024 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:55:15,024 INFO [cursor_tts_mcp.orchestrator] speak_played category='progress' engine='edge-tts' text='正在查 Cursor 官方是否支持把 MCP 发到可搜索的工具集。'
+2026-09-10 22:55:38,703 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='summary' code='OK' interrupt=False queued=False text='可以。官方市场要审核；社区目录更快。朋友小范围用的话 Git 加配置也行。'
+2026-09-10 22:55:38,704 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\b4b21668e767459fa2eab70f2475199a.mp3
+2026-09-10 22:55:41,500 INFO [cursor_tts_mcp.playback] player started pid=14752 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\b4b21668e767459fa2eab70f2475199a.mp3
+2026-09-10 22:55:51,338 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:55:51,338 INFO [cursor_tts_mcp.orchestrator] speak_played category='summary' engine='edge-tts' text='可以。官方市场要审核；社区目录更快。朋友小范围用的话 Git 加配置也行。'
+2026-09-10 22:56:40,058 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='progress' code='OK' interrupt=False queued=False text='正在检查语音 MCP 的多语言与音色配置。'
+2026-09-10 22:56:40,059 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\70be577bd03b49848a2e290177e5b957.mp3
+2026-09-10 22:56:41,928 INFO [cursor_tts_mcp.playback] player started pid=15604 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\70be577bd03b49848a2e290177e5b957.mp3
+2026-09-10 22:56:47,740 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:56:47,740 INFO [cursor_tts_mcp.orchestrator] speak_played category='progress' engine='edge-tts' text='正在检查语音 MCP 的多语言与音色配置。'
+2026-09-10 22:57:06,209 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='summary' code='OK' interrupt=False queued=False text='结论：未做多语言切换，默认中文音色；改配置可换外语声，但规则仍要求短中文。'
+2026-09-10 22:57:06,210 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\9f086b37cb8143c88c469dfc93449bbf.mp3
+2026-09-10 22:57:10,480 INFO [cursor_tts_mcp.playback] player started pid=42624 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\9f086b37cb8143c88c469dfc93449bbf.mp3
+2026-09-10 22:57:20,278 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:57:20,279 INFO [cursor_tts_mcp.orchestrator] speak_played category='summary' engine='edge-tts' text='结论：未做多语言切换，默认中文音色；改配置可换外语声，但规则仍要求短中文。'
+2026-09-10 22:59:36,836 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='progress' code='OK' interrupt=False queued=False text='开始改语音 MCP：按系统语言自动选音色。'
+2026-09-10 22:59:36,837 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\397cc10393314ef9a36492affa18be9e.mp3
+2026-09-10 22:59:38,925 INFO [cursor_tts_mcp.playback] player started pid=17788 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\397cc10393314ef9a36492affa18be9e.mp3
+2026-09-10 22:59:45,144 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 22:59:45,144 INFO [cursor_tts_mcp.orchestrator] speak_played category='progress' engine='edge-tts' text='开始改语音 MCP：按系统语言自动选音色。'
+2026-09-10 23:06:47,287 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='summary' code='OK' interrupt=False queued=False text='已支持按系统语言自动选音色。请在 Cursor 里重载 MCP 后生效。'
+2026-09-10 23:06:47,287 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\6666bf2d02b847d4a8bad19697e3bc13.mp3
+2026-09-10 23:06:49,511 INFO [cursor_tts_mcp.playback] player started pid=1568 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\6666bf2d02b847d4a8bad19697e3bc13.mp3
+2026-09-10 23:06:57,774 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 23:06:57,774 INFO [cursor_tts_mcp.orchestrator] speak_played category='summary' engine='edge-tts' text='已支持按系统语言自动选音色。请在 Cursor 里重载 MCP 后生效。'
+2026-09-10 23:08:34,725 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='progress' code='OK' interrupt=False queued=False text='开始用 FORCE_LOCALE=en-US 验证英文音色。'
+2026-09-10 23:08:34,726 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\dfcf5a244b7d41dfaff7fe044600a56e.mp3
+2026-09-10 23:08:39,096 INFO [cursor_tts_mcp.playback] player started pid=33264 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\dfcf5a244b7d41dfaff7fe044600a56e.mp3
+2026-09-10 23:08:45,669 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 23:08:45,669 INFO [cursor_tts_mcp.orchestrator] speak_played category='progress' engine='edge-tts' text='开始用 FORCE_LOCALE=en-US 验证英文音色。'
+2026-09-10 23:09:22,637 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='summary' code='OK' interrupt=False queued=False text='验证通过：强制 en-US 后音色为 JennyNeural，英文已播出。'
+2026-09-10 23:09:22,638 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\85e9ee9b5074416eae5b19e8c0cdc5ce.mp3
+2026-09-10 23:09:24,824 INFO [cursor_tts_mcp.playback] player started pid=9220 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\85e9ee9b5074416eae5b19e8c0cdc5ce.mp3
+2026-09-10 23:09:32,092 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 23:09:32,092 INFO [cursor_tts_mcp.orchestrator] speak_played category='summary' engine='edge-tts' text='验证通过：强制 en-US 后音色为 JennyNeural，英文已播出。'
+2026-09-10 23:10:26,809 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='progress' code='OK' interrupt=False queued=False text='开始准备 Plugin 包装，随后带你走官方审核提交流程。'
+2026-09-10 23:10:26,810 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\3428c048d4084c2ab5acc68c874a6531.mp3
+2026-09-10 23:10:29,259 INFO [cursor_tts_mcp.playback] player started pid=42916 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\3428c048d4084c2ab5acc68c874a6531.mp3
+2026-09-10 23:10:36,079 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 23:10:36,079 INFO [cursor_tts_mcp.orchestrator] speak_played category='progress' engine='edge-tts' text='开始准备 Plugin 包装，随后带你走官方审核提交流程。'
+2026-09-10 23:11:22,811 INFO [cursor_tts_mcp.orchestrator] speak_accepted category='decision' code='OK' interrupt=False queued=False text='官方审核需要公开 Git 仓库。我先打好 Plugin 包并初始化 git，随后'
+2026-09-10 23:11:22,812 INFO [cursor_tts_mcp.engines.edge] engine=edge-tts synthesizing voice=zh-CN-XiaoxiaoNeural path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\9aec1100e63e431cabc9543e3d6a90a3.mp3
+2026-09-10 23:11:26,606 INFO [cursor_tts_mcp.playback] player started pid=41900 path=C:\Users\17695\AppData\Local\Temp\cursor-tts-mcp\9aec1100e63e431cabc9543e3d6a90a3.mp3
+2026-09-10 23:11:36,216 INFO [cursor_tts_mcp.engines.router] engine_ok engine='edge-tts' fallback=False
+2026-09-10 23:11:36,216 INFO [cursor_tts_mcp.orchestrator] speak_played category='decision' engine='edge-tts' text='官方审核需要公开 Git 仓库。我先打好 Plugin 包并初始化 git，随后'
