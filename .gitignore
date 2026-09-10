@@ -7,4 +7,6 @@ dist/
 build/
 config/local.yaml
 .tmp/
+.tmp_*.log
 *.mp3
+.DS_Store

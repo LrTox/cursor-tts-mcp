@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Progress-triggered TTS for Cursor Agent: speak/stop with system-locale voice (edge-tts).",
   "author": {
-    "name": "cursor-tts contributors"
+    "name": "LrTox"
   },
   "keywords": [
     "tts",
