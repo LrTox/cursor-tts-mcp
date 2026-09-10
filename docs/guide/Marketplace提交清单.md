@@ -4,6 +4,11 @@ Official publish form: https://cursor.com/marketplace/publish
 
 **Public repo:** https://github.com/LrTox/cursor-tts-mcp
 
+**Logotype URL（表单用）:**  
+`https://raw.githubusercontent.com/LrTox/cursor-tts-mcp/main/assets/logo.png`
+
+（矢量备用：`…/assets/logo.svg`）
+
 ## Before submit
 
 - [x] `.cursor-plugin/plugin.json` (name=`cursor-tts`, author=`LrTox`)

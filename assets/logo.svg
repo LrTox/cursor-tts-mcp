@@ -1,6 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="cursor-tts">
-  <rect width="128" height="128" rx="28" fill="#1a1a2e"/>
-  <circle cx="64" cy="52" r="18" fill="#e94560"/>
-  <path d="M40 88c8 14 40 14 48 0" fill="none" stroke="#eaeaea" stroke-width="8" stroke-linecap="round"/>
-  <path d="M28 64c6 22 66 22 72 0" fill="none" stroke="#e94560" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Tox">
+  <!-- Tox brand mark: T-megaphone + sound waves -->
+  <defs>
+    <style>
+      .bg { fill: #0F1419; }
+      .t { fill: #2DD4BF; }
+      .wave { fill: none; stroke: #F59E0B; stroke-width: 22; stroke-linecap: round; }
+      .word { fill: #F8FAFC; font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; font-size: 72px; font-weight: 700; letter-spacing: 2px; }
+    </style>
+  </defs>
+  <rect class="bg" width="512" height="512" rx="96"/>
+  <!-- Letter T bar -->
+  <rect class="t" x="146" y="118" width="168" height="44" rx="10"/>
+  <!-- Letter T stem -->
+  <rect class="t" x="208" y="152" width="44" height="168" rx="10"/>
+  <!-- Megaphone cone from stem -->
+  <path class="t" d="M248 210 L318 176 L318 296 L248 262 Z"/>
+  <!-- Sound waves -->
+  <path class="wave" d="M348 200 A52 52 0 0 1 348 312"/>
+  <path class="wave" d="M378 176 A88 88 0 0 1 378 336"/>
+  <path class="wave" d="M408 150 A124 124 0 0 1 408 362"/>
+  <!-- Wordmark -->
+  <text class="word" x="256" y="430" text-anchor="middle">Tox</text>
 </svg>
