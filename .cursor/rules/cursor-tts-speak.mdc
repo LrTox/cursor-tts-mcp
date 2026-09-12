@@ -5,6 +5,7 @@ alwaysApply: true
 
 # 语音播报 cursor-tts（必须遵守）
 
-有实质进展、任务结论、报错或需用户操作时，**立即**调用 MCP `speak`，短句≤80字，**语言跟随系统 UI**（勿强制中文）。禁止只打字。
+**禁止只播开头和结尾。** 过程中的重要内容（发现/结论/差异/根因/核对事实/风险/验证）必须立刻 MCP `speak`。  
+同一轮应多次播报；Plan 子任务过程中同样适用。短句≤80字。举例不是格式规范。
 
-详见用户级规则：`%USERPROFILE%\.cursor\rules\cursor-tts-speak.mdc`
+详见：`%USERPROFILE%\.cursor\rules\cursor-tts-speak.mdc`

@@ -8,10 +8,11 @@ from typing import Any, Protocol
 from cursor_tts_mcp.models import SpeakCategory, SpeakPriority, SpeakRequest, SpeakResult, StopResult
 
 _SPEAK_DESCRIPTION_BASE = (
-    "Speak a short status line for the user. "
-    "Use for real progress, task conclusions, errors/blocks, and when the user must decide or act. "
-    "Always call this when delivering a conclusion — do not only type. "
-    "Do not read code or long text. Do not wait until the whole task finishes for the first call."
+    "Speak a short status line for important mid-process content — not only start/end. "
+    "Speak findings, conclusions, diffs, root causes, verified facts, risks, and verification "
+    "results as soon as they appear (including during Plan subtasks). Multiple speaks per turn. "
+    "Also speak for errors/blocks and when the user must decide. "
+    "Do not speak on every trivial tool success. Do not read code, long text, or full plans."
 )
 
 STOP_DESCRIPTION = (

@@ -2,8 +2,8 @@
 
 | 项 | 内容 |
 |---|---|
-| 日期 | 2026-09-10（修订 · 热更新补丁加固） |
-| 结论 | **不做自动全文朗读**；用用户级 Hook **修复旧对话不吃 Rules** |
+| 日期 | 2026-09-11（修订 · 禁止只播开头结尾） |
+| 结论 | **过程重要内容必播**；开头说过不算完；spoke 后若继续工具工作仍催促；Plan 同理 |
 | 对应验收 | AC-P1-02/03 全文朗读仍 N/A |
 
 ## 根因（Cursor 平台行为）
@@ -22,17 +22,26 @@ Hooks 的 `hooks.json` **会监视并热重载**，可作为补丁通道。
 - `%USERPROFILE%\.cursor\hooks.json`
 - `%USERPROFILE%\.cursor\hooks\tts_speak_remind.py`
 - `%USERPROFILE%\.cursor\rules\cursor-tts-speak.mdc`（新对话）
-- `cqca-lms/.cursor/rules/cursor-tts-speak.mdc`（LMS 项目副本）
+- `mcp/.cursor/rules/cursor-tts-speak.mdc`（仓库副本）
 
 | Hook | 对旧对话的作用 |
 |------|----------------|
-| `beforeSubmitPrompt` | 标记新一轮用户消息（清零本轮 speak 标记）；**不能**注入 context（平台 schema 限制） |
-| `sessionStart` | 新对话注入强制 speak 上下文 |
-| `preToolUse` | 任意工具前注入 `agent_message` 催促（90s 节流）；标记本轮有工具活动 |
-| `postToolUse` | **无 matcher**，覆盖 Read/StrReplace/CallDynamicTool 等；工具后注入提醒（45s 节流） |
-| `afterMCPExecution` | **无 matcher**；识别 speak（含 CallDynamicTool→speak）并记录本轮已 speak |
-| `subagentStop` | 子代理结束后 followup 催促 speak |
-| `stop` | 本轮用过工具却未 speak → 自动 followup 再催一次（`loop_limit=1`） |
+| `beforeSubmitPrompt` | 标记新一轮用户消息（清零本轮 speak 标记）；同步 payload 中的 plan/agent mode |
+| `sessionStart` | 注入过程播报提醒（在解决什么 / 结果是什么；含 Plan 子任务） |
+| `preToolUse` | Plan/Agent 均可 nudge（90s 节流） |
+| `postToolUse` | Plan/Agent 均可注入提醒（60s 节流） |
+| `afterMCPExecution` | 识别 speak 并记录 |
+| `afterAgentResponse` | 整份计划稿不自动播；过程结论可兜底短句 |
+| `subagentStop` | 子代理结束后催促过程/结果 speak（90s） |
+| `stop` | 有工具活动却未 speak → followup |
+
+### 2026-09-11 播报意图澄清
+
+| 问题 | 修复 |
+|------|------|
+| 误做成「仅子任务开始/结束各一句」 | 改为子任务**执行过程中**播：在解决什么、结果是什么 |
+| 「第 N 步」被当成规范 | 规则写明举例非格式；禁止机械念稿 |
+| 工具级刷屏 | 仍禁止无信息量的每次工具成功播报 |
 
 ### 2026-09-10 热更新失败二次修复
 
@@ -42,11 +51,12 @@ Hooks 的 `hooks.json` **会监视并热重载**，可作为补丁通道。
 | `afterMCPExecution` matcher=`speak` 可能漏掉 CallDynamicTool | 去掉 matcher，按 payload 识别 speak |
 | 旧对话缺少回合内提醒 | 新增 `preToolUse` → `agent_message` |
 
-本地脚本自测：有 speak 则 stop 不催；无 speak 且有工具活动则 stop 产出 `followup_message`；Read 类工具也会标记 tools。
+本地脚本自测：Plan 模式 stop/subagent 不催；Agent 有 speak 则 stop 不催；无 speak 且有工具活动则 stop 产出 `followup_message`。
 
 ## 局限
 
 - Cursor **无法**让旧对话真正热加载全部 Rules 文本；本方案只保证 **TTS speak 约束**在旧对话可被催出。
 - 纯闲聊、本轮零工具调用时，不强制 followup（避免打扰）。
+- Plan mode 若 payload 不带 mode 字段，依赖 SwitchMode/CreatePlan 痕迹与文稿启发式，极端情况下需用户切回 Agent 后再播。
 - 若 Hook 未生效：Cursor Settings → Hooks 查看；或 **Developer: Reload Window**。
 - 全新对话仍以 User Rules / 项目 Rules 为准；Hook 是旧对话补丁与兜底。

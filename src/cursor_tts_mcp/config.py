@@ -108,7 +108,7 @@ class LocaleConfig:
 class TtsSettings:
     enabled: bool = True
     max_chars: int = 80
-    queue_size: int = 3
+    queue_size: int = 8
     dedupe_window_ms: int = 5000
     rate: str = "+0%"
     engine: EngineConfig = field(default_factory=EngineConfig)
@@ -140,7 +140,7 @@ def _from_mapping(raw: dict[str, Any]) -> TtsSettings:
     return TtsSettings(
         enabled=_as_bool(t.get("enabled"), True),
         max_chars=int(t.get("max_chars", 80)),
-        queue_size=int(t.get("queue_size", 3)),
+        queue_size=int(t.get("queue_size", 8)),
         dedupe_window_ms=int(t.get("dedupe_window_ms", 5000)),
         rate=str(t.get("rate", "+0%")),
         engine=EngineConfig(

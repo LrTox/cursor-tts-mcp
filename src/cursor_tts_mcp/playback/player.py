@@ -90,17 +90,33 @@ class Player:
         async with self._lock:
             await self._kill_unlocked()
             self._claim_exclusive()
+            # Wait on Position vs Duration — sleeping only NaturalDuration once is
+            # flaky (often 0/too-short → Close mid-utterance = incomplete speech).
             script = (
                 f"$p = {path!r};"
                 "Add-Type -AssemblyName presentationCore;"
                 "$m = New-Object System.Windows.Media.MediaPlayer;"
                 "$m.Open([uri]$p);"
-                "Start-Sleep -Milliseconds 200;"
+                "$ready = $false;"
+                "for ($i = 0; $i -lt 120; $i++) {"
+                "  if ($m.NaturalDuration.HasTimeSpan -and "
+                "$m.NaturalDuration.TimeSpan.TotalMilliseconds -gt 80) { $ready = $true; break };"
+                "  Start-Sleep -Milliseconds 50"
+                "};"
+                "if (-not $ready) { Start-Sleep -Milliseconds 300 };"
+                "$m.Volume = 1;"
                 "$m.Play();"
-                "while ($m.NaturalDuration.HasTimeSpan -eq $false) { Start-Sleep -Milliseconds 50 };"
-                "$dur = $m.NaturalDuration.TimeSpan.TotalMilliseconds;"
-                "Start-Sleep -Milliseconds ([Math]::Max(200, [int]$dur + 300));"
-                "$m.Close();"
+                "$deadline = [Environment]::TickCount + 120000;"
+                "while ([Environment]::TickCount -lt $deadline) {"
+                "  if ($m.NaturalDuration.HasTimeSpan) {"
+                "    $d = $m.NaturalDuration.TimeSpan.TotalMilliseconds;"
+                "    $pos = $m.Position.TotalMilliseconds;"
+                "    if ($d -gt 80 -and $pos -ge ($d - 60)) { break }"
+                "  };"
+                "  Start-Sleep -Milliseconds 80"
+                "};"
+                "try { $m.Stop() } catch {};"
+                "try { $m.Close() } catch {};"
             )
             self._proc = subprocess.Popen(
                 [
